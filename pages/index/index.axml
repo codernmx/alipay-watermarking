@@ -1,0 +1,14 @@
+<canvas id="myCanvas" style="width:{{systemInfo.windowWidth}}px; height: {{systemInfo.windowHeight*2-300}}rpx;" a:if="{{ phptoFlag === '1' }}"></canvas>
+
+<camera id="camera" device-position="back" flash="off" style="width:{{systemInfo.windowWidth}}px; height: {{systemInfo.windowHeight*2-300}}rpx;" 
+  onReady="onCameraReady" onError="onCameraError" onStop="onCameraStop" a:else />
+
+
+<!--<button size="default" type="primary" onTap="chooseImg">选图</button> -->
+<view a:if="{{ phptoFlag === '1' }}" class="saveBtn">
+  <button size="default" type="primary" onTap="saveImage">保存</button>
+  <button size="default" type="primary" onTap="back">返回</button>
+</view>
+<block a:else>
+  <button size="default" type="primary" onTap="takePhoto">拍照</button>
+</block>

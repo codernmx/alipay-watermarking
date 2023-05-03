@@ -1,0 +1,8 @@
+.saveBtn{
+	display: flex;
+	justify-content: space-between;
+}
+
+.saveBtn button{
+	width: 49%;
+}
