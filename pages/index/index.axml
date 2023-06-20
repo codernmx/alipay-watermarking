@@ -1,8 +1,19 @@
-<canvas id="myCanvas" style="width:{{systemInfo.windowWidth}}px; height: {{systemInfo.windowHeight*2-300}}rpx;" a:if="{{ phptoFlag === '1' }}"></canvas>
+<canvas a:if="{{ phptoFlag === '1' }}" id="myCanvas" style="width:{{systemInfo.windowWidth}}px; height: {{systemInfo.windowHeight-50}}px;">
+</canvas>
 
-<camera id="camera" device-position="back" flash="off" style="width:{{systemInfo.windowWidth}}px; height: {{systemInfo.windowHeight*2-300}}rpx;" 
-  onReady="onCameraReady" onError="onCameraError" onStop="onCameraStop" a:else />
+<camera
+  a:else
+  id="camera"
+  device-position="back"
+  flash="off"
+  style="width:{{systemInfo.windowWidth}}px; height: {{systemInfo.windowHeight-50}}px;"
+  onReady="onCameraReady"
+  onError="onCameraError"
+  onStop="onCameraStop"
+/>
 
+
+<!-- <image mode="scaleToFill" src="{{tempImagePath}}" style="width:414px;height:896px" /> -->
 
 <!--<button size="default" type="primary" onTap="chooseImg">选图</button> -->
 <view a:if="{{ phptoFlag === '1' }}" class="saveBtn">
